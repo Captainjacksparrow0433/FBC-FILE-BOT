@@ -29,12 +29,12 @@ async def handle_force_sub(bot: Client, cmd: Message):
             return 200
         await bot.send_message(
             chat_id=cmd.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**\n\n"
-                 "Due to Overload, Only Channel Subscribers can use the Bot!",
+            text="**Please Join My group to use this Bot!**\n\n"
+                 "Due to Overload, Only group member can use the Bot!",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                        InlineKeyboardButton("🤖 Join group for latest movies", url=https://t.me/filmboxcommunity)
                     ],
                     [
                         InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshForceSub")
