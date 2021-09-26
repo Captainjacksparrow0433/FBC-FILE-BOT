@@ -1,4 +1,4 @@
-# (c) @AbirHasan2005
+# (c) @MRK_YT
 
 import os
 
@@ -6,47 +6,41 @@ import os
 class Config(object):
 	API_ID = int(os.environ.get("API_ID"))
 	API_HASH = os.environ.get("API_HASH")
-	BOT_TOKEN = os.environ.get("BOT_TOKEN")
-	BOT_USERNAME = os.environ.get("BOT_USERNAME")
+	BOT_TOKEN = os.environ.get("MT_BOT_TOKEN")
+	BOT_USERNAME = os.environ.get("MT_BOT_USERNAME")
 	DB_CHANNEL = int(os.environ.get("DB_CHANNEL"))
-	BOT_OWNER = int(os.environ.get("BOT_OWNER"))
+	BOT_OWNER = int(os.environ.get("MT_BOT_OWNER"))
 	DATABASE_URL = os.environ.get("DATABASE_URL")
-	UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL")
-	LOG_CHANNEL = os.environ.get("LOG_CHANNEL", None)
+	UPDATES_CHANNEL = os.environ.get("MT_UPDATES_CHANNEL", None)
+	LOG_CHANNEL = int(os.environ.get("MT_LOG_CHANNEL"))
 	BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "1234567890").split())
-	FORWARD_AS_COPY = bool(os.environ.get("FORWARD_AS_COPY", True))
+	FORWARD_AS_COPY = bool(os.environ.get("MO_TECH_YT", True))
 	BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
 	BANNED_CHAT_IDS = list(set(int(x) for x in os.environ.get("BANNED_CHAT_IDS", "-1001362659779 -1001255795497").split()))
 	OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", True))
 	ABOUT_BOT_TEXT = f"""
 This is Permanent Files Store Bot!
 Send me any file I will save it in my Database. Also works for channel. Add me to channel as Admin with Edit Permission, I will add Save Uploaded File in Channel & add Sharable Button Link.
-
 🤖 **My Name:** [Files Store Bot](https://t.me/{BOT_USERNAME})
-
 📝 **Language:** [Python3](https://www.python.org)
-
 📚 **Library:** [Pyrogram](https://docs.pyrogram.org)
-
 📡 **Hosted on:** [Heroku](https://heroku.com)
-
-🧑🏻‍💻 **Developer:** @Abintply
-
-👥 **Join group for latest movies:** [Film box community](https://t.me/filmboxcommunity)
-
-📢 **Updates channel:** [FILMBOX](https://t.me/joinchat/6vdFqAbAJ6AzNDVl)
+🧑🏻‍ **Developer:** @AbirHasan2005
+👨‍💻 **Editing:** @Mrk_YT
+📺 **Support:** [YouTube Channel](https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ)
+🗣️ **Any Doubt:** @Mo_Tech_Group
+📢 **Updates Channel:** [Discovery Projects](https://t.me/Mo_Tech_YT)
 """
 	ABOUT_DEV_TEXT = f"""
-🧑🏻‍💻 **Developer:** @Abintply
-
-Developer is Super Noob. Just Learning from Official Docs. Please Donate the developer for Keeping the Service Alive.
-
-Also remember that developer will Delete Adult Contents from Database. So better don't Store Those Kind of Things.
-
-[Donate Now](https://www.paypal.me/AbirHasan2005) (PayPal)
+🧑🏻‍ **Developer:** @AbirHasan2005
+💻 **Developer Details:** [Clcik Here](https://github.com/MoTechYT/MT-FilesStoreBot/blob/main/README.md)
+👨‍💻 **Editing:** @Mrk_YT
+🗣️ **Any Doubt:** @Mo_Tech_Group
+📺 **Support :** [YouTube Channel](https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ)
+📢 **Updates Channel:** [Discovery Projects](https://t.me/Mo_Tech_YT)
+Donate Now (coming soon)
 """
 	HOME_TEXT = """
-Hi, [{}](tg://user?id={})\n\nThis is Permanent **File Store Bot**.
-
-Send me any file I will give you a permanent Sharable Link. I Support Channel Also! Check **About Bot** Button.
+**👋Hi**, [{}](tg://user?id={})\n\n**This is Permanent** **MT FileStoreBot**.
+**Send me any file I will give you a permanent Sharable Link. I Support Channel Also! Check About Bot Button**.
 """
